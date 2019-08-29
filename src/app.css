@@ -1,0 +1,59 @@
+.tbactionbtn {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    color:rgba(0, 0, 0, 0.75);
+    margin:0px;
+    padding: 0;
+    display: inline-block;
+    line-height: 32px;
+    cursor: pointer;width: 30px; height: 30px; text-align: center;
+    border-radius: 50%; -webkit-border-radius: 50%;
+}
+.btnallignment{
+	float: right;
+	margin: auto;
+}
+
+.blue-hover:hover {
+    background-color: #01b9c1;
+    color: #fff;
+}
+.red-hover:hover {
+    background-color: #ff5454;
+    color: #fff;
+}
+.grey_btn {
+    background-color: rgba(0, 0, 0, 0.60) !important;
+    color: #fff !important;
+    line-height: 15px !important;
+    box-shadow: none !important; -webkit-box-shadow: none !important;
+    float: left;
+}
+.grey_btn button {
+    background-color: rgba(0, 0, 0, 0.0) !important;
+}
+
+.grey_btn button span {
+    color: #fff !important;
+}
+
+.whtbtnsm {
+    background-color: #fff;
+    padding: 0px 15px;
+    height: 25px;
+    color: #f39500;
+    border: 0px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 25px;
+}
+
+.whtbtnsm:hover {
+    opacity: 0.60;
+}
+.panel-body{
+    margin-left: 30px;
+}
