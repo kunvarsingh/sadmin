@@ -11,6 +11,7 @@ import Signup from '../src/containers/signup/index';
 import Services from '../src/containers/services/index';
 import Shop from '../src/containers/shops/index';
 import Users from '../src/containers/users/index';
+import Voucher from '../src/containers/voucher/index';
 
 var routes = [
   {
@@ -39,6 +40,34 @@ var routes = [
     name: "Shops",
     icon: "nc-icon nc-pin-3",
     component: Shop,
+    layout: "/dashboard"
+  },
+  {
+    path: "/service",
+    name: "Appointments",
+    icon: "nc-icon nc-diamond",
+    component: Services,
+    layout: "/dashboard"
+  },
+  {
+    path: "/vouchers",
+    name: "Vouchers",
+    icon: "nc-icon nc-pin-3",
+    component: Voucher,
+    layout: "/dashboard"
+  },
+  {
+    path: "/service",
+    name: "Plan",
+    icon: "nc-icon nc-diamond",
+    component: Services,
+    layout: "/dashboard"
+  },
+  {
+    path: "/service",
+    name: "Subscription",
+    icon: "nc-icon nc-diamond",
+    component: Services,
     layout: "/dashboard"
   },
   // {

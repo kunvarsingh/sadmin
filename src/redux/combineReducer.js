@@ -5,7 +5,7 @@ import loginReducer from '../containers/login/Reducer';
 import serviceReducer from '../containers/services/Reducer';
 import shopReducer from '../containers/shops/Reducer';
 import userReducer from '../containers/users/Reducer';
-
+import voucherReducer from '../containers/voucher/Reducer'
 
 
 const rootReducer = combineReducers({
@@ -14,7 +14,8 @@ const rootReducer = combineReducers({
     loginReducer,
     serviceReducer,
     shopReducer,
-    userReducer
+    userReducer,
+    voucherReducer
 })
 
 export default rootReducer;
