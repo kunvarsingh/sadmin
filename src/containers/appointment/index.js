@@ -109,7 +109,6 @@ class Appointment extends Component {
 
   }
 
-
   renderTableList = () => {
     if (this.props.AppointmentList && this.props.AppointmentList.length > 0) {
       return (
