@@ -12,6 +12,7 @@ import Services from '../src/containers/services/index';
 import Shop from '../src/containers/shops/index';
 import Users from '../src/containers/users/index';
 import Voucher from '../src/containers/voucher/index';
+import Appointment from '../src/containers/appointment/index';
 
 var routes = [
   {
@@ -43,10 +44,10 @@ var routes = [
     layout: "/dashboard"
   },
   {
-    path: "/service",
+    path: "/appointments",
     name: "Appointments",
     icon: "nc-icon nc-diamond",
-    component: Services,
+    component: Appointment,
     layout: "/dashboard"
   },
   {
