@@ -25,35 +25,35 @@ var routes = [
    {
     path: "/users",
     name: "Vendors",
-    icon: "nc-icon nc-pin-3",
+    icon: "nc-icon nc-single-02",
     component: Users,
     layout: "/dashboard"
   },
   {
     path: "/service",
     name: "Services",
-    icon: "nc-icon nc-diamond",
+    icon: "nc-icon nc-settings-gear-65",
     component: Services,
     layout: "/dashboard"
   },
   {
     path: "/shops",
     name: "Shops",
-    icon: "nc-icon nc-pin-3",
+    icon: "nc-icon nc-shop",
     component: Shop,
     layout: "/dashboard"
   },
   {
     path: "/appointments",
     name: "Appointments",
-    icon: "nc-icon nc-diamond",
+    icon: "nc-icon nc-single-copy-04",
     component: Appointment,
     layout: "/dashboard"
   },
   {
     path: "/vouchers",
     name: "Vouchers",
-    icon: "nc-icon nc-pin-3",
+    icon: "nc-icon nc-money-coins",
     component: Voucher,
     layout: "/dashboard"
   },
@@ -67,7 +67,7 @@ var routes = [
   {
     path: "/service",
     name: "Subscription",
-    icon: "nc-icon nc-diamond",
+    icon: "nc-icon nc-tag-content",
     component: Services,
     layout: "/dashboard"
   },

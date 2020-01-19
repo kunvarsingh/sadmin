@@ -97,13 +97,14 @@ export function getByIdVOUCHERError(error) {
 
 
 
-export function addVOUCHER(data) {
+export function addVOUCHER(data,id) {
     return dispatch => {
         dispatch(getVOUCHER());
-        fetch(API_URL+'addVOUCHER',
+        let finalURL = id ? API_URL+'updateVoucherById/'+id : API_URL+'addVoucher'; 
+        fetch(finalURL,
              {
                 body: JSON.stringify(data),
-                method: 'POST',
+                method: id ? 'PATCH' : 'POST',
                 headers: {'Content-Type':'application/json'},
                 })
             .then(res => res.json())
@@ -177,7 +178,7 @@ export function getVOUCHERById(data) {
 export function deleteVOUCHER(data) {
     return dispatch => {
         dispatch(deletevoucher());
-        fetch(API_URL+'deleteVOUCHERById/'+data,
+        fetch(API_URL+'deleteVoucherById/'+data,
              {
                 // body: JSON.stringify(data),
                 method: 'DELETE',

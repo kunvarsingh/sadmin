@@ -114,29 +114,18 @@ class Appointment extends Component {
     if (this.props.AppointmentList && this.props.AppointmentList.length > 0) {
       return (
         this.props.AppointmentList.map((data, index) => {
+          console.log('data.userId && data.userId.length >1 ? data.userId[0].FirstName',data.userId && data.userId.length >0 && data.userId[0].FirstName)
           return (
             <tr key={index}>
             <td>{index+1}#</td>
-              <td>{''}</td>
-              <td>{''}</td>
-              <td>{data.CityName ? data.CityName : '-'}</td>
-              <td>{data.StateName ? data.StateName : '-'}</td>
-              <td>{data.Zipcode ? data.Zipcode : '-'}</td>
-              <td>{data.Address ? data.Address : '-'}</td>
-                <td>{data.salonStatus ? 'Approved' : 'Pending'}</td>
-                <td>
-                     <Field className="no_margin w-45p"
-                      name="active_status"
-                      toggled={data.salonStatus ? data.salonStatus : false}
-                      component={renderToggleButton}
-                      onChange={(e) => this.onActiveToggle(e, index, data)}
-                      style={styles.toggle}
-                      thumbStyle={styles.thumbOff}
-                      trackStyle={styles.trackOff}
-                      thumbSwitchedStyle={styles.thumbSwitched}
-                      trackSwitchedStyle={styles.trackSwitched}
-                    />
-                </td>
+              <td>{data.userId && data.userId.length >0 ? data.userId[0].FirstName : ''}</td>
+              <td>{data.timming ? data.timming :''}</td>
+              <td>{data.amount ? data.amount : '-'}</td>
+              <td>{data.status ? data.status : '-'}</td>
+              <td>{data.shopId && data.shopId.length >0 ? data.shopId[0].SalonName : ''}</td>
+              <td>{data.staffId && data.staffId.length >0 ? data.staffId[0].StaffName : ''}</td>
+              <td>{data.serviceId && data.serviceId.length >0 ? data.serviceId[0].ServiceName : ''}</td>
+                <td>{data.paymentStatus ? 'Approved' : 'Pending'}</td>
               <td>
               {/*<button type="button" onClick={(e) => this.handleEditClick(e,data)} title="Edit" className="tbactionbtn blue-hover"><i className="fa fa-pencil-square-o" aria-hidden="true"></i></button>*/}
               <button type="button" onClick={(e) => this.handleDeleteClick(e,data)} title="Delete" className="tbactionbtn red-hover"><i className="fa fa-trash" aria-hidden="true"></i></button>
@@ -205,13 +194,13 @@ class Appointment extends Component {
                             <tr>
                                <th width="5%">S.No#</th>
                               <th width="10%">User Name</th>
-                              <th width="10%">ContactNo</th>
-                              <th width="10%">CityName</th>
-                              <th width="10%">State</th>
-                              <th width="10%">Zip-code</th>
-                              <th width="20%">Address</th>
-                              <th width="10%">Status</th>
-                              <th width="10%"></th>
+                              <th width="10%">Time</th>
+                              <th width="10%">Amount</th>
+                              <th width="10%">Staus</th>
+                              <th width="10%">Shop</th>
+                              <th width="20%">Staff Name</th>
+                              <th width="20%">Service</th>
+                              <th width="10%">Payment Status</th>
                               <th width="10%">Action</th>
 
 

@@ -2,7 +2,7 @@ import './services.css';
 import {connect} from 'react-redux'
 import React,{Component} from 'react';
 // import Alert from 'react-s-alert';
-import {Field, reduxForm, reset, change} from 'redux-form';
+import {Field, reduxForm, reset, change,initialize} from 'redux-form';
 import {renderTextField,renderSelectField,renderTimePicker,CommonButton} from '../../utils/components';
 import DraggableModal from '../../utils/DraggableModal'
 // import {validate} from './validate';
@@ -48,7 +48,7 @@ class Vouchers extends Component {
   }
 
   onSubmit(formData){
-      this.props.addVoucher(formData);
+      this.props.addVoucher(formData,this.state.VoucherId);
       this.setState({isAdd:false,open:false,VoucherId:null},()=>{
         this.props.dispatch(reset('VoucherForm'))
       })
@@ -127,9 +127,19 @@ class Vouchers extends Component {
      this.props.dispatch(reset('VoucherForm')) 
     })
   }
-  // openModal = ()=>{
-  //   this.setState({open:true})
-  // }
+  
+  openModal = ()=>{
+    this.clearForm();
+    this.setState({open:true})
+  }
+
+  clearForm = ()=>{
+    this.props.dispatch(change('VoucherForm','Name',null))
+    this.props.dispatch(change('VoucherForm','value',null))
+    this.props.dispatch(change('VoucherForm','Type',null))
+    this.props.dispatch(change('VoucherForm','description',null))
+  }
+
   handleClose =()=>{
     this.props.dispatch(reset('VoucherForm')) 
     this.setState({open:false})

@@ -28,7 +28,7 @@ export function getLoginError(error) {
 }
 
 
-export function login(data) {
+export function login(data,props) {
     console.log('inside action',data);
     return dispatch => {
         dispatch(getLogin());
@@ -40,15 +40,16 @@ export function login(data) {
         })
             .then(res => res.json())
             .then(res => {
-                if (res.error) {
-                    toast.warning(res.message);
-                    throw (res.error);
+                if(res.status===400){
+                    toast.error(res.message);
+                    return false;
+                }else{
+                     props.history.push('/dashboard/users');
+                    toast.success(res.message);
+                    dispatch(getLoginSuccess(res));
+                    localStorage.setItem('authToken',res.token)
+                    return res;
                 }
-                history.push('dashboard');
-                toast.success(res.message);
-                dispatch(getLoginSuccess(res));
-                localStorage.setItem('authToken',res.token)
-                return res;
             })
             .catch(error => {
                 dispatch(getLoginError(error));

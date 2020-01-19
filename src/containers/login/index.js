@@ -41,8 +41,8 @@ class Login extends Component {
 
   onSubmit(formData){
       console.log('inside component',formData)
-      this.props.login(formData)
-          this.props.history.push('/dashboard');
+      let data = this.props.login(formData,this.props)
+          // this.props.history.push('/dashboard');
   }
   render() {
     const { handleSubmit } = this.props;
