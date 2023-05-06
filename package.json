@@ -19,7 +19,7 @@
     "react-infinite": "^0.13.0",
     "react-router-dom": "^5.0.1",
     "react-s-alert": "^1.4.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-select": "^3.0.4",
     "react-toastify": "^5.3.2",
     "reactstrap": "^8.0.1",
